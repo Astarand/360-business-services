@@ -1,0 +1,816 @@
+/* Refined visual design for right-side service slider */
+.services-area-refined .service-slider-container {
+  position: relative;
+}
+
+.services-area-refined .service-slider-container::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  background: linear-gradient(130deg, rgba(37, 117, 252, 0.3), rgba(106, 17, 203, 0.22), rgba(24, 90, 157, 0.18));
+  filter: blur(22px);
+  z-index: -1;
+  border-radius: 26px;
+}
+
+.services-area-refined .service-slider {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 22px !important;
+  box-shadow: 0 26px 60px rgba(17, 37, 84, 0.22) !important;
+  backdrop-filter: blur(3px);
+}
+
+.services-area-refined #activeServiceCard {
+  border-radius: 22px 22px 0 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  isolation: isolate;
+  padding: clamp(18px, 3.6vw, 32px) !important;
+  min-height: clamp(340px, 50vw, 460px) !important;
+}
+
+.services-area-refined #activeServiceCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 42%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.services-area-refined #activeServiceCard::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -140%;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.services-area-refined #activeServiceCard .service-icon {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 28px rgba(14, 27, 61, 0.24) !important;
+}
+
+.services-area-refined #activeServiceCard .service-title {
+  letter-spacing: 0.2px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.26);
+}
+
+.services-area-refined #activeServiceCard .service-content li span:last-child {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.services-area-refined #activeServiceCard .service-content .details-link {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 12px 30px rgba(14, 27, 61, 0.25) !important;
+}
+
+.services-area-refined #activeServiceCard .service-content .details-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.services-area-refined .service-number {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.4px;
+}
+
+.services-area-refined .service-navigation {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%) !important;
+  border-top: 1px solid rgba(37, 117, 252, 0.12) !important;
+  border-radius: 0 0 22px 22px;
+  padding: 18px 22px !important;
+}
+
+.services-area-refined .nav-btn {
+  box-shadow: 0 10px 24px rgba(18, 44, 99, 0.18) !important;
+}
+
+.services-area-refined .prev-btn {
+  background: #ffffff !important;
+  border-color: rgba(37, 117, 252, 0.45) !important;
+}
+
+.services-area-refined .next-btn {
+  background: linear-gradient(135deg, #2367f3 0%, #522ac9 100%) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.services-area-refined .prev-btn:hover,
+.services-area-refined .next-btn:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+}
+
+@media (max-width: 768px) {
+  .services-area-refined .service-slider-container::before {
+    inset: -8px;
+    filter: blur(14px);
+  }
+
+  .services-area-refined .service-slider {
+    border-radius: 16px !important;
+  }
+
+  .services-area-refined #activeServiceCard {
+    border-radius: 16px 16px 0 0 !important;
+    min-height: clamp(300px, 60vw, 400px) !important;
+  }
+
+  .services-area-refined .service-navigation {
+    border-radius: 0 0 16px 16px;
+    padding: 14px 16px !important;
+  }
+}
+
+/* Mobile Optimization CSS for Service Area */
+/* Mobile-first responsive design for service area */
+@media (max-width: 768px) {
+  .services-area-two .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .services-area-two .row {
+    margin: 0;
+  }
+
+  .services-area-two .col-lg-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .services-content-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .services-content-left .section-title-two h2 {
+    font-size: clamp(24px, 6vw, 32px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .services-content-left .content-paragraph p {
+    font-size: 15px !important;
+    text-align: left;
+  }
+
+  .service-slider-container {
+    margin-top: 0 !important;
+  }
+
+  .active-service-card {
+    border-radius: 12px !important;
+    margin: 0 5px;
+  }
+
+  .service-navigation {
+    border-radius: 0 0 12px 12px !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .nav-buttons {
+    justify-content: center;
+  }
+
+  .service-indicators {
+    display: none !important;
+  }
+
+  /* Enhanced navigation buttons for mobile */
+  .nav-btn {
+    min-width: 50px !important;
+    min-height: 50px !important;
+    transform: scale(1);
+  }
+
+  .nav-btn:hover {
+    transform: scale(1.05) !important;
+  }
+
+  .nav-btn:active {
+    transform: scale(0.95) !important;
+  }
+
+  /* Previous button hover effects */
+  .prev-btn:hover .btn-ripple {
+    opacity: 1 !important;
+  }
+
+  .prev-btn:hover i {
+    color: white !important;
+  }
+
+  /* Next button hover effects */
+  .next-btn:hover .btn-glow {
+    opacity: 1 !important;
+  }
+
+  .next-btn:hover {
+    box-shadow: 0 15px 40px rgba(37, 117, 252, 0.6) !important;
+  }
+
+  /* Better spacing for mobile content - applies to all 14 services */
+  .service-content ul li {
+    margin-bottom: 14px !important;
+  }
+
+  .service-content ul li span:first-child {
+    margin-top: 2px;
+  }
+
+  /* Ensure all service cards adapt properly on mobile */
+  .active-service-card * {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+
+
+  /* Improve readability for all service titles on mobile */
+  .service-title {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Ensure service points are readable on all gradient backgrounds */
+  .service-content ul li span:last-child {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Requested tweaks: smaller text/icons + smoother transition */
+.services-area-refined #activeServiceCard {
+  transition: background 0.45s ease;
+  will-change: transform, opacity, filter;
+}
+
+.services-area-refined #activeServiceCard.is-leaving-next {
+  animation: cardLeaveNext 0.24s ease forwards;
+}
+
+.services-area-refined #activeServiceCard.is-entering-next {
+  animation: cardEnterNext 0.52s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Pricing CTA section */
+.pricing-cta-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(37, 117, 252, 0.12);
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 0 18px 45px rgba(17, 37, 84, 0.08);
+}
+
+.pricing-cta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(37, 117, 252, 0.08);
+  color: #2575fc;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+}
+
+.pricing-cta-kicker i {
+  font-size: 14px;
+}
+
+.pricing-cta-title {
+  color: #0b2154;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.18;
+  margin-bottom: 14px;
+}
+
+.pricing-cta-description {
+  color: #5f6b85;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 28px;
+  max-width: 38rem;
+}
+
+.pricing-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 52px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2575fc 0%, #0b2154 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 14px 28px rgba(37, 117, 252, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.pricing-pdf-btn:hover,
+.pricing-pdf-btn:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(37, 117, 252, 0.32);
+  filter: brightness(1.03);
+}
+
+.pricing-pdf-modal .modal-content {
+  border: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0b2154;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.pricing-pdf-modal .modal-title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.pricing-pdf-modal .btn-close {
+  filter: invert(1);
+  opacity: 1;
+}
+
+.pricing-pdf-modal .modal-body {
+  padding-top: 12px;
+}
+
+.pricing-pdf-modal iframe {
+  width: 100%;
+  height: min(78vh, 820px);
+  border: 0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .pricing-cta-panel {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .pricing-cta-title {
+    max-width: none;
+  }
+
+  .pricing-pdf-btn {
+    width: 100%;
+  }
+
+  .pricing-pdf-modal iframe {
+    height: 70vh;
+  }
+}
+
+/* Choose area: right-side video showcase redesign */
+.video-showcase-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 22px 58px rgba(9, 31, 79, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-showcase-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+
+.video-box-head {
+  margin-bottom: 16px;
+}
+
+.video-box-title {
+  color: #0b2154;
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.video-box-subtitle {
+  color: #587099;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.video-box-player-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #081331;
+  box-shadow: 0 14px 36px rgba(13, 33, 86, 0.3);
+  aspect-ratio: 16 / 9;
+}
+
+.video-box-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #081331;
+}
+
+.video-box-lightbox {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(11, 33, 84, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.video-box-lightbox:hover {
+  color: #fff;
+  background: rgba(37, 117, 252, 0.85);
+  transform: translateY(-2px);
+}
+
+.video-box-play-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.34);
+}
+
+.video-box-meta {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.video-meta-item {
+  background: linear-gradient(180deg, #f5f9ff 0%, #edf3ff 100%);
+  border: 1px solid rgba(37, 117, 252, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.video-meta-label {
+  display: block;
+  font-size: 12px;
+  color: #5c76a0;
+  margin-bottom: 2px;
+}
+
+.video-meta-item strong {
+  color: #0b2154;
+  font-size: 15px;
+}
+
+.choose-area-enhanced .badge-text {
+  background: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 22px rgba(5, 19, 54, 0.24);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+.choose-vertical-points {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.choose-point-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+}
+
+.choose-point-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.3);
+}
+
+.choose-point-content h4 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.choose-point-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (max-width: 991px) {
+  .video-showcase-card {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-box-lightbox {
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .video-box-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-point-item {
+    padding: 12px 13px;
+  }
+
+  .choose-point-content h4 {
+    font-size: 16px;
+  }
+}
+
+.services-area-refined #activeServiceCard.is-leaving-prev {
+  animation: cardLeavePrev 0.24s ease forwards;
+}
+
+.services-area-refined #activeServiceCard.is-entering-prev {
+  animation: cardEnterPrev 0.52s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.services-area-refined #activeServiceCard.is-entering-next::before,
+.services-area-refined #activeServiceCard.is-entering-prev::before {
+  animation: shineSweep 0.55s ease;
+}
+
+.services-area-refined #activeContent.content-animate li,
+.services-area-refined #activeContent.content-animate .details-link {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: contentRise 0.42s ease forwards;
+}
+
+.services-area-refined #activeContent.content-animate li:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.services-area-refined #activeContent.content-animate li:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.services-area-refined #activeContent.content-animate li:nth-child(3) {
+  animation-delay: 0.09s;
+}
+
+.services-area-refined #activeContent.content-animate li:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+.services-area-refined #activeContent.content-animate li:nth-child(5) {
+  animation-delay: 0.15s;
+}
+
+.services-area-refined #activeContent.content-animate .details-link {
+  animation-delay: 0.18s;
+}
+
+@keyframes cardLeaveNext {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-34px) scale(0.97) rotate(-0.8deg);
+    filter: blur(2px);
+  }
+}
+
+@keyframes cardEnterNext {
+  from {
+    opacity: 0;
+    transform: translateX(34px) scale(0.97) rotate(0.8deg);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes cardLeavePrev {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(34px) scale(0.97) rotate(0.8deg);
+    filter: blur(2px);
+  }
+}
+
+@keyframes cardEnterPrev {
+  from {
+    opacity: 0;
+    transform: translateX(-34px) scale(0.97) rotate(-0.8deg);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes shineSweep {
+  from {
+    left: -140%;
+  }
+
+  to {
+    left: 140%;
+  }
+}
+
+@keyframes contentRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-area-refined #activeServiceCard .service-icon {
+  width: clamp(46px, 7.2vw, 64px) !important;
+  height: clamp(46px, 7.2vw, 64px) !important;
+}
+
+.services-area-refined #activeServiceCard .service-icon i,
+.services-area-refined #activeServiceCard #activeIcon {
+  font-size: clamp(17px, 3vw, 24px) !important;
+}
+
+.services-area-refined #activeServiceCard .service-title,
+.services-area-refined #activeServiceCard #activeTitle {
+  font-size: clamp(16px, 2.9vw, 23px) !important;
+  line-height: 1.25 !important;
+}
+
+.services-area-refined #activeServiceCard .service-content li span:first-child {
+  min-width: clamp(18px, 3.2vw, 21px) !important;
+  height: clamp(18px, 3.2vw, 21px) !important;
+  font-size: clamp(9px, 1.5vw, 11px) !important;
+  margin-right: clamp(8px, 1.5vw, 12px) !important;
+}
+
+.services-area-refined #activeServiceCard .service-content li span:last-child {
+  font-size: clamp(11px, 2.3vw, 14px) !important;
+  line-height: 1.4 !important;
+}
+
+.services-area-refined #activeServiceCard .details-link {
+  font-size: clamp(11px, 2.1vw, 13px) !important;
+  padding: clamp(8px, 1.6vw, 11px) clamp(14px, 3vw, 20px) !important;
+}
+
+@media (max-width: 768px) {
+
+  .services-area-refined #activeServiceCard.is-leaving-next,
+  .services-area-refined #activeServiceCard.is-leaving-prev {
+    animation-duration: 0.2s;
+  }
+
+  .services-area-refined #activeServiceCard.is-entering-next,
+  .services-area-refined #activeServiceCard.is-entering-prev {
+    animation-duration: 0.4s;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-area-two .col-lg-6 {
+    margin-bottom: 30px;
+  }
+
+  .active-service-card {
+    min-height: 450px !important;
+  }
+
+  .service-title {
+    font-size: 28px !important;
+  }
+}
+
+/* Large screen optimization */
+@media (min-width: 1200px) {
+  .service-slider-container {
+    margin-top: 40px !important;
+  }
+
+  .active-service-card {
+    min-height: 580px !important;
+  }
+}
+
+/* Hide service indicators on all screen sizes */
+.service-indicators {
+  display: none !important;
+}
+
+/* Center navigation on all screen sizes */
+.service-navigation {
+  justify-content: center !important;
+}
+
+/* Smooth animations for all screen sizes */
+.active-service-card,
+.service-navigation,
+.nav-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects for desktop */
+@media (min-width: 1025px) {
+  .active-service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-btn:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Homepage pricing cards: equal height */
+.pricing-area-two .pricing-item-wrap .row.justify-content-center>[class*="col-"] {
+  display: flex;
+}
+
+.pricing-area-two .pricing-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+}
+
+.pricing-area-two .pricing-list {
+  flex: 1;
+}
+
+.pricing-area-two .pricing-btn {
+  margin-top: auto;
+}
+
+@media (max-width: 991px) {
+  .pricing-area-two .pricing-box {
+    min-height: auto;
+  }
+}

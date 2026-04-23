@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /.env
+Disallow: /config/
+
+# Sitemap location
+Sitemap: https://360bizservice.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
