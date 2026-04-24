@@ -102,7 +102,7 @@ class RegisterController extends Controller
             return false;
         }
 
-        $secretKey = '6LczXeQrAAAAAA1XC_l41LGitQqEcHijR7cD7cip';
+        $secretKey = '<Secrect Key Is Here>';
         $verifyURL = 'https://www.google.com/recaptcha/api/siteverify';
         
         $data = [
